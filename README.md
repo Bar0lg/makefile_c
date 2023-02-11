@@ -29,13 +29,13 @@ Dans ce dossiers doivent etre placé tous les headers ('.h') du programme.
 ### 'dat/'
 
 Ce dossier est pour les fichiers utilisés par le programme qui ne sont pas des fichiers code.
-Lors de la compilation ses fichiers serons placés dans 'build/data'
+Lors de la compilation ses fichiers serons placés dans 'build/data'.
 
 ### 'scripts/'
 
-Ce dossier sert a stocker des scripts qui ne font pas partit du programme (comme un fichier python ou bash)
+Ce dossier sert a stocker des scripts qui ne font pas partit du programme (comme un fichier python ou bash).
 
-Ce dossier n'est pas utilisé lors de la compilation
+Ce dossier n'est pas utilisé lors de la compilation.
 
 ### 'spe/'
 
@@ -78,11 +78,11 @@ Initialise l'arboressance et crée le fichier runner s'il n'existe pas.
 
 -Compile tous les fichiers C en fichiers objet et les place dans 'build/obj'.
 
--Crée l'executable a partir des fichiers objets
+-Crée l'executable a partir des fichiers objets.
 
--Copie tous les fichiers dans 'dat/' dans 'build/data'
+-Copie tous les fichiers dans 'dat/' dans 'build/data'.
 
--Copie tous les fichiers speciaux a la base du dossier 'build'
+-Copie tous les fichiers speciaux a la base du dossier 'build'.
 
 ### make clean
 
@@ -92,18 +92,18 @@ Suprimme le dossier 'build'.
 
 ### make create_runner
 
-Crée le fichier runner et le place dans 'spe/'?
+Crée le fichier runner et le place dans 'spe/'.
 Si le fichier existe deja alors ne fait rien.
 
 ### make create_sandbox
 
-Crée un dossier 'SANDBOX/' qui est une copie de tous les dossiers et fichiers presents
+Crée un dossier 'SANDBOX/' qui est une copie de tous les dossiers et fichiers presents.
 
-Cela vous permet de tester ou debugger votre programme sur une copie provisoire de votre programme
+Cela vous permet de tester ou debugger votre programme sur une copie provisoire de votre programme.
 
 ### make clean_sandbox
 
-Supprimme le dossier 'SANADBOX/'
+Supprimme le dossier 'SANADBOX/'.
 
 
 ## Conclusion
