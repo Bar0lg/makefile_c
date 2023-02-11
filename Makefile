@@ -31,8 +31,11 @@ OBJ = $(SRC:$(SRCDIR)%.c=$(OBJDIR)%.o)
 
 #Installation du Programme
 install:
+	mkdir -p build/bin
+	mkdir -p build/obj
+	mkdir -p build/data
 	make $(BINDIR)$(NAME) --no-print-directory
-	make copy_bash --no-print-directory
+	make copy_spe --no-print-directory
 	chmod +x $(BUILDDIR)$(NOM_RUNNER)
 	echo "Installation effectue avec Succes"
 
@@ -51,10 +54,7 @@ $(OBJDIR)%.o:$(SRCDIR)%.c
 
 #nettoyage des fichiers intermédiares
 clean:
-	rm -f  build/obj/*.o
-	rm -f build/bin/*
-	rm -f build/data/*
-	rm -f build/$(NOM_RUNNER)
+	rm -rf build 
 	echo "Nettoyage effectue."
 
 
@@ -64,9 +64,6 @@ clean:
 setup:
 ifneq (TBD,$(NAME))
 	mkdir -p src
-	mkdir -p build/bin
-	mkdir -p build/obj
-	mkdir -p build/data
 	mkdir -p include 
 	mkdir -p scripts
 	mkdir -p dat
@@ -99,7 +96,7 @@ clean_sandbox:
 	echo "Sandbox supprimee"
 
 #Copie du runner
-copy_bash:
-	cp $(SPEDIR)$(NOM_RUNNER) $(BUILDDIR)
-	echo "Runner installe avec succes"
+copy_spe:
+	cp $(SPEDIR)* $(BUILDDIR)
+	echo "Fichiers speciaux deplacés avec succes"
 
