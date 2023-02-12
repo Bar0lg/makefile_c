@@ -78,7 +78,7 @@ endif
 
 create_runner:
 ifeq (,$(wildcard $(SPEDIR)$(NOM_RUNNER)))
-	echo -e "#!/bin/bash\ncd $(dirname $(realpath $0))/bin\n./$(NAME)" > $(SPEDIR)$(NOM_RUNNER)
+	echo -e "#!/bin/bash\ncd \$$(dirname \$$(realpath \$$0))/bin\n./$(NAME)" > $(SPEDIR)$(NOM_RUNNER)
 	echo "Fichier runner cree"
 else
 	echo "Fichier runner deja existant"
