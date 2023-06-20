@@ -29,6 +29,9 @@ OBJ = $(SRC:$(SRCDIR)%.c=$(OBJDIR)%.o)
 .SILENT:
 
 
+go:
+	make clean --no-print-directory;bear -- make install --no-print-directory
+
 #Installation du Programme
 install:
 	mkdir -p build/bin
