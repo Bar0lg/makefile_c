@@ -2,7 +2,7 @@
 
 #Configuration
 NAME = TBD
-CFLAGS = -Wall -Wextra -fsanitize=address
+CFLAGS = -Wall -Wextra -fsanitize=address -g -Werrors
 NOM_RUNNER = runner.sh
 
 #Variables
@@ -29,11 +29,9 @@ OBJ = $(SRC:$(SRCDIR)%.c=$(OBJDIR)%.o)
 .SILENT:
 
 
-go:
-	make clean --no-print-directory;bear -- make install --no-print-directory
 
 #Installation du Programme
-install:
+go:
 	mkdir -p build/bin
 	mkdir -p build/obj
 	mkdir -p build/data
@@ -41,6 +39,9 @@ install:
 	make copy_spe --no-print-directory
 	chmod +x $(BUILDDIR)$(NOM_RUNNER)
 	echo "Installation effectue avec Succes"
+
+install:
+	make clean --no-print-directory;bear -- make go --no-print-directory
 
 
 #Compilation du fichier final.
