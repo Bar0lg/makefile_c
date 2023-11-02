@@ -2,7 +2,7 @@
 
 #Configuration
 NAME = TBD
-CFLAGS = -Wall -Wextra -fsanitize=address -g -Werrors
+CFLAGS = -Wall -Wextra -fsanitize=address -g -Werror
 NOM_RUNNER = runner.sh
 
 #Variables
